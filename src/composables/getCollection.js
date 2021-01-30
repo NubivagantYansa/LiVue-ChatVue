@@ -10,7 +10,7 @@ const getCollection = (collection) => {
     .collection(collection)
     .orderBy("createdAt");
 
-  collectionRef.onSnapshot(
+  const unsub = collectionRef.onSnapshot(
     (snap) => {
       let results = [];
       snap.docs.forEach((doc) => {
@@ -29,6 +29,12 @@ const getCollection = (collection) => {
       error.value = "could not fetch the data";
     }
   );
+
+  watchEffect((onInvalidate) => {
+    // unsub from prev collection when watcher is stopped (component unmounted) - it stops when getCollection('messages") in chatroom unmounts
+    onInvalidate(() => unsub());
+    //unsubscribe from real time listener so we don't stuck up Real time listeners
+  });
 
   return { error, documents };
 };
