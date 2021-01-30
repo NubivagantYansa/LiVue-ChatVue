@@ -3,12 +3,12 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6LVr8aUUmXdQhlKYGlIVGluJHuX-xEm0",
-  authDomain: "blog-vue-ffd4e.firebaseapp.com",
-  projectId: "blog-vue-ffd4e",
-  storageBucket: "blog-vue-ffd4e.appspot.com",
-  messagingSenderId: "5454428996",
-  appId: "1:5454428996:web:dd19a74d47d35f22f03511",
+  apiKey: "AIzaSyDFOGhT-JZEnKOX9sy3vWC4i8JEXPX4mCU",
+  authDomain: "livue-chatvue-ed4d2.firebaseapp.com",
+  projectId: "livue-chatvue-ed4d2",
+  storageBucket: "livue-chatvue-ed4d2.appspot.com",
+  messagingSenderId: "104574778215",
+  appId: "1:104574778215:web:4c4facdf23d2647b008dc2",
 };
 
 // init firebase
